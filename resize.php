@@ -3,10 +3,10 @@
 	include('SimpleImage.php');
   
 	// Choose current folder
-	$handle = opendir(".");
+	$directory = "./";
 	
 	// Collection of extensions
-	$mimes = array('jpg','jpeg','png','gif');
+	$exts = array('jpg','jpeg','png','gif');
 	
 	// Resized file pre
 	$prefix = '50_';
@@ -15,23 +15,25 @@
 	$scale = 50;
 	
 	// ------------------------------------------------------------------------------------------
+	$handle = opendir($directory);
 	// Read all the files in this folder
 	while( ($file = readdir($handle)) !== false )
 	{
 		$ext = substr($file, strpos($file,'.')+1, strlen($file) );
-		if( in_array( strtolower( $ext ), $mimes) &&  strpos($file,$prefix) === FALSE )
+		if( in_array( strtolower($ext), $exts) &&  strpos($file,$prefix) === FALSE )
 		{
 			$image = new SimpleImage();
 			$image->load($file);
 			# chek options at: http://www.white-hat-web-design.co.uk/blog/resizing-images-with-php/
 			$image->scale($scale); 
-			$image->save($prefix.$file);
+			$image->save($directory.$prefix.$file);
 			// print the change
 			echo $prefix.$file.', ';
 		}
 			
 	}
 	
+	print 'DONE!';
 	
 	
 ?>
