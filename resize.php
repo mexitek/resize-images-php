@@ -9,7 +9,7 @@
 	$mimes = array('jpg','jpeg','png','gif');
 	
 	// Resized file pre
-	$prefix = '500x500_';
+	$prefix = '50_';
 	
 	// Scale Percentage
 	$scale = 50;
