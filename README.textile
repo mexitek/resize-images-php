@@ -1,9 +1,3 @@
-h1. Instructions
-
-# place somewhere on your server or machine that has your images. (obviously, php needs to be installed)
-# Execute resize.php either via terminal or browser
-# That's it.  By default it will resize all images by 50%.
-
 h1. Configuration
 
 There are a handful of variables at the top of the script that allow you to change functionality
@@ -12,6 +6,12 @@ There are a handful of variables at the top of the script that allow you to chan
 * @$directory@: allows you to select the path of the directory where the images are held. 
 * @$exts@: list of acceptable extensions for images.
 * @$scale@: Determines what % the original image will scale down to.
+
+h1. Instructions
+
+# place somewhere on your server or machine that has your images. (obviously, php needs to be installed)
+# Execute resize.php either via terminal or browser
+# That's it.  By default it will resize all images by 50%.
 
 h1. SimpleImage.php
 
