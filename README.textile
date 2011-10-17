@@ -17,3 +17,5 @@ h1. SimpleImage.php
 
 This script leverages the class SimpleImage.php. More information about this class can be found here:
 http://www.white-hat-web-design.co.uk/blog/resizing-images-with-php/ 
+
+h1. License: "arlo.mit-license.org":http://arlo.mit-license.org
